@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Municipality Statistics</title>
-    <link rel="stylesheet" href="src/styles.css" />
-    <script src="src/fetch.js" defer></script>
+    <title>Population Data</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="fetch.js" defer></script>
   </head>
   <body>
-    <h1>Municipality Employment Statistics in Finland</h1>
+    <h1>Municipality Population Data</h1>
     <div class="center">
-      <table>
+      <table id="population-table">
         <thead>
           <tr>
             <th>Municipality</th>
             <th>Population</th>
-            <th>Employment Amount</th>
-            <th>Employment %</th>
           </tr>
         </thead>
         <tbody id="population-data"></tbody>
