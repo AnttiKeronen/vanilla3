@@ -9,27 +9,35 @@ document.addEventListener("DOMContentLoaded", () => {
       const employmentUrl =
         "https://statfin.stat.fi/PxWeb/sq/5e288b40-f8c8-4f1e-b3b0-61b86ce5c065";
 
-      // Fetch population data
+      console.log("Fetching population data from:", populationUrl);
       const populationResponse = await fetch(populationUrl);
-      if (!populationResponse.ok)
+      if (!populationResponse.ok) {
         throw new Error(
-          `Network response was not ok: ${populationResponse.statusText}`
+          `Population data fetch error: ${populationResponse.statusText}`
         );
+      }
       const populationData = await populationResponse.json();
+      console.log("Population data:", populationData);
 
-      // Fetch employment data
+      console.log("Fetching employment data from:", employmentUrl);
       const employmentResponse = await fetch(employmentUrl);
-      if (!employmentResponse.ok)
+      if (!employmentResponse.ok) {
         throw new Error(
-          `Network response was not ok: ${employmentResponse.statusText}`
+          `Employment data fetch error: ${employmentResponse.statusText}`
         );
+      }
       const employmentData = await employmentResponse.json();
+      console.log("Employment data:", employmentData);
 
-      // Extract and prepare the data
+      // Extract data
       const municipalities =
         populationData.dataset.dimension.Alue.category.label;
       const populations = populationData.dataset.value;
       const employmentAmounts = employmentData.dataset.value;
+
+      console.log("Municipalities:", municipalities);
+      console.log("Populations:", populations);
+      console.log("Employment amounts:", employmentAmounts);
 
       // Clear existing rows
       tbody.innerHTML = "";

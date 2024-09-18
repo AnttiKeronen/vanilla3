@@ -2,25 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Municipality Data</title>
+    <title>Population and Employment Data</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="fetch.js" defer></script>
   </head>
   <body>
+    <h1>Municipality Employment Statistics in Finland</h1>
     <div class="center">
-      <h1>Municipality Employment Statistics in Finland</h1>
       <table id="population-table">
         <thead>
           <tr>
             <th>Municipality</th>
             <th>Population</th>
             <th>Employment Amount</th>
-            <th>Employment %</th>
+            <th>Employment (%)</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody id="population-data"></tbody>
       </table>
     </div>
   </body>
