@@ -22,7 +22,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    Object.entries(municipalities).forEach(([key, municipality], index) => {
+    // Clear existing table rows if any
+    tbody.innerHTML = "";
+
+    municipalities.forEach((municipality, index) => {
       if (index >= populations.length || index >= employmentAmounts.length) {
         console.warn(`Missing data for municipality: ${municipality}`);
         return;
@@ -35,12 +38,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       );
 
       const row = document.createElement("tr");
-      populationcell;
+
       const municipalityCell = document.createElement("td");
       municipalityCell.textContent = municipality;
       row.appendChild(municipalityCell);
 
-      // P
       const populationCell = document.createElement("td");
       populationCell.textContent = population;
       row.appendChild(populationCell);
