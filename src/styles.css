@@ -1,46 +1,56 @@
+/* Styling for the body */
 body {
   font-family: Verdana, Arial, sans-serif;
 }
 
+/* Centering and styling for the table container */
 .center {
   margin: auto;
   padding: 60px;
   width: 60%;
 }
 
+/* Table styling */
 table {
-  width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Ensures borders are collapsed */
+  width: 100%; /* Full width of container */
   font-size: 16px;
   text-align: left;
-  table-layout: fixed;
 }
 
+/* Table header styling */
 th {
-  background-color: #b7d0ff;
-  font-weight: bold;
-  padding: 12px 0px 12px 6px;
-  border-bottom: 2px solid gray;
+  background-color: #b7d0ff; /* Header background color */
+  font-weight: bold; /* Bold text */
+  padding: 12px 0px 12px 6px; /* Padding */
+  border-bottom: 2px solid gray; /* Bottom border for header */
 }
 
+/* Table data cell styling */
 td {
-  padding: 6px;
-  border-bottom: 1px solid gray;
+  padding: 6px; /* Cell padding */
+  border-bottom: 1px solid gray; /* Bottom border for data cells */
 }
 
-thead th {
-  position: sticky;
-  top: 0;
+/* Styling for alternating row colors */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Even rows background color */
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+tr:nth-child(odd) {
+  background-color: #ffffff; /* Odd rows background color */
 }
 
-tbody tr:nth-child(odd) {
-  background-color: #ffffff;
+/* Conditional styling for rows */
+tr.high-employment {
+  background-color: #abffbd; /* High employment background color */
 }
 
+tr.low-employment {
+  background-color: #ff9e9e; /* Low employment background color */
+}
+
+/* Header styling */
 h1 {
-  text-align: center;
+  text-align: center; /* Center the header text */
 }
